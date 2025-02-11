@@ -1,164 +1,229 @@
-/* General styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 .container3 {
+    width: 100%;
+    height: 550px;
+    display: flex;
+    align-content: start;
+    justify-content: start;
+    background: url(mainnnn.avif);
+    background-position: center;
+    background-size:50em ;
+   border-radius:  99px;
+   padding: 60px;
+  
+  }
+  .box{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px 40px;
+  }
+  .box .links a{
+    margin: 0px 40px;
+    text-decoration: none;
+    color: black;
+    
+  }
+  .box .links a:hover{
+    border-bottom: 4px solid black;
+    transition: all ease-in 0.4s;
+  }
+  .box button{
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+  }
+  .box button:hover{
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+  }
+   .box h2{
+    color: black;
+    font-size: 15px;
+    text-shadow: 0px 0px 60px rgb(27, 26, 26);
+  }
+  .box2{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    color: white;
+    text-shadow: 0px 0px 60px rgb(27, 26, 26);
+  }
+  .box2 button{
+    margin: 5px 0px;
+    width: 30%;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+  }
+ .sale{
   width: 100%;
-  height: auto;
+  height: 260px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  background: url(mainnnn.avif) center/cover no-repeat;
-  border-radius: 20px;
-  padding: 30px;
-}
-
-/* Navbar */
-.box {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-  flex-wrap: wrap;
-}
-
-.box .links a {
-  margin: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.box .links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.box button {
-  border: none;
-  border-radius: 20px;
-  color: white;
-  background-color: black;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.box button:hover {
-  color: black;
-  background-color: white;
-  border: 2px solid black;
-}
-
-/* Responsive Banner Section */
-.box2 {
-  width: 100%;
-  max-width: 600px;
-  text-align: center;
-  color: white;
-  margin-top: 20px;
-}
-
-.box2 button {
-  width: auto;
-  padding: 10px 20px;
-}
-
-/* Sale Section */
-.sale {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 40px 20px;
-}
-
-.sale .card1,
-.sale .card2,
-.sale .card3,
-.sale .card4,
-.sale .card5 {
-  width: 100%;
-  max-width: 200px;
-  height: 200px;
+  margin: 90px 0px;
+  padding: 20px 90px;
+  gap: 20px;
+ }
+ .sale .card1{
+  width: 25%;
+  height: 100%;
+  background: url('sale.jpg');
   background-position: center;
-  background-size: cover;
+  background-size:20em;
   border-radius: 50%;
-  transition: 0.4s;
-}
-
-.sale .card1:hover,
-.sale .card2:hover,
-.sale .card3:hover,
-.sale .card4:hover,
-.sale .card5:hover {
-  transform: scale(1.05);
-}
-
-/* Video and Card Section */
-.container5 {
+  transition: all ease-in 0.4s;
+ }
+ .sale .card2{
+  width: 25%;
+  height: 100%;
+  background: url('bs.webp');
+  background-position: center;
+  background-size:20em;
+  border-radius: 50%;
+  transition: all ease-in 0.4s;
+ }
+ .sale .card3{
+  width: 25%;
+  height: 100%;
+  background: url('makeup.jpg');
+  background-position: center;
+  background-size:cover;
+  border-radius: 50%;
+  transition: all ease-in 0.4s;
+ }
+ .sale .card4{
+  width: 25%;
+  height: 100%;
+  background: url('skinn.jpg');
+  background-position: center;
+  background-size:contain;
+  border-radius: 50%;
+  transition: all ease-in 0.4s;
+ }
+ .sale .card5{
+  width: 25%;
+  height: 100%;
+  background: url('hair.jpeg');
+  background-position: center;
+  background-size:cover;
+  border-radius: 50%;
+  transition: all ease-in 0.4s;
+ }
+ .sale .card5:hover ,
+ .sale .card1:hover ,
+ .sale .card2:hover ,
+ .sale .card3:hover,
+ .sale .card4:hover{
+  transform: scale(1.04);
+ }
+ 
+ 
+ .sale card1 ,
+ .sale card2,
+ .sale card3,
+ .sale card4,
+ .sale card5, h2{
+  display: grid;
+  place-content: center;
+  font-size: 16px;
+  margin-top: 220px ;
+  padding: 5px;
+ }
+ .container5{
   width: 100%;
-  padding: 50px 10px;
+  height: 400px;
+  padding: 165px;
+  margin: 60px 0px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.container5 .card {
+ }
+ .container5 .card{
   width: 100%;
+  height: 380px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.vdo {
-  width: 100%;
-  max-width: 600px;
-  height: 300px;
+  flex-direction: row;
+  gap: 20px;
+ }
+ .container5 .card .vdo {
+  width: 60%;
+  height: 380px;
+  box-shadow: 0px 0px 7px gainsboro;
+  background: url(https://i.ytimg.com/vi/cB0I3qkHqoc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAF718Nhs91AAYTfpIdlSPpPzOYOQ);
   background-position: center;
-  background-size: cover;
-}
+  background-size:cover;
 
-.cards {
+ }
+ .card .cards{
+  width: 38%;
+  height: 380px;
+ }
+ 
+ .card .cards .a{
   width: 100%;
-  max-width: 400px;
-}
-
-.cards .a,
-.cards .b {
-  width: 100%;
-  height: 150px;
-  background-position: center;
-  background-size: cover;
-  transition: 0.4s;
-}
-
-/* Footer Section */
-.cont1 {
-  width: 100%;
+  height: 170px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 50px 10px;
+  align-items: end;
+  justify-content: start;
+  padding: 10px;
+  color: white;
+  background: url(lipgloss.jpg);
+  background-position: center;
+  background-size:cover;
+  transition: all ease-in 0.4s;
+  margin-bottom: 35px;
+  box-shadow: 0px 0px 7px gainsboro;
+ }
+ .card .cards .b{
+  width: 100%;
+  height: 170px;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  padding: 10px;
+  color: white;
+   background: url(eye.webp);
+   background-position: center;
+   background-size:cover;
+   transition: all ease-in 0.4s;
+   box-shadow: 0px 0px 7px gainsboro;
+ }
+
+ .cont1 {
+  width: 100%;
+  height: calc(100vh - 250px);
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
   background-color: whitesmoke;
+  color: black;
+  padding-bottom: 100px;
 }
 
 .cardd1 {
   flex: 1;
-  min-width: 250px;
-  text-align: center;
-  margin-bottom: 20px;
+  margin: 0 15px;
+  
 }
 
 .cardd1 h2 {
   font-size: 18px;
+  margin-bottom: 10px;
   border-bottom: 2px solid #555;
   padding-bottom: 5px;
 }
@@ -172,6 +237,19 @@
   color: #70636883;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .cont1 {
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .cardd1 {
+      margin-bottom: 20px;
+      text-align: center;
+  }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
