@@ -1,130 +1,140 @@
 .container6 {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* Changed from height: 100vh to min-height to prevent content overflow */
     display: flex;
     flex-direction: column;
-    align-content: start;
+    align-items: center; /* Center content properly */
     justify-content: center;
     background: url(https://media.licdn.com/dms/image/C4E12AQFHMxGV23HYFA/article-cover_image-shrink_600_2000/0/1520131358659?e=2147483647&v=beta&t=7rwXADjCU48qUe4yG_e9lTtUvR5wcVRep3obLDX47sU);
     background-position: center;
-    background-size: cover; 
-   border-radius:  99px;
-   padding: 15px;
-   color: white;
-  }
+    background-size: cover;
+    border-radius: 99px;
+    padding: 15px;
+    color: white;
+}
 
-.container6 .validation-container6 .title h2{
+/* Form container */
+.validation-container6 {
+    width: 30%;
+    max-width: 400px; /* Ensures it doesn't get too large */
+    height: auto; /* Adjusted for dynamic height */
+    border: 2px solid whitesmoke;
+    background: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2% 0;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/* Title */
+.container6 .validation-container6 .title h2 {
     color: white;
     margin-bottom: 20px;
-}
-
-.validation-container6{
-    width: 30%;
-    height: 600px;
-    border: 2PX solid whitesmoke;
-    background:transparent;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin:  1% 7%;
-    border-radius: 20px;
-    padding: 5px 10px;
-}
-
-    
-.validation-container6 form{
-    width: 400px;
-    padding: 15px 10px;
-    
-    margin-bottom: 200px;
-    
-}
-form .input-field{ 
-    width: 100%; 
-    margin: 5px 5px;
-    
-}
-form .input-field input{
-    width: 100%;
-    padding: 5px;
-    margin:5px 0px;
-    border-radius: 30px;
-    outline: none;
-    border: 2px solid rgba(0, 0, 0, 0.65);
-}
-    
-form .input-field p{ 
-    
-    font-size: 14px; font-weight: bold; 
-}
-    
-form .input-field
-form .input-field input[type='text'],
-form .input-field input[type='email'],
-form .input-field input[type='number'],
-form .input-field select{
-
-    width: 100%;
-    padding: 5px;
-    margin:5px 0px;
-    border-radius: 4px;
-    outline: none;
-    border: 2px solid rgba(0, 0, 0, 0.65);
-}
-
-form .input-field .error-div{
-    padding: 1px 0px;
-}
-
-form .input-field .error-div span{
-    color:red;
-    font-size: 13px;
-    font-weight: bold;
-
-}
-form .input-field .sub-field{
-    width: 20%;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: row;
-    gap: 9px;
-}
-.input-field .inp{
-    width: 100%;
-    padding: 0px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    flex-direction: row;
-}
-form .input-field input[type='checkbox']{
-    width: 100%;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: row;
-    gap: 9px;
-    border: 2px solid black;
 }
 
-form .button-field{
+/* Form */
+.validation-container6 form {
     width: 100%;
+    padding: 15px;
 }
 
-form .button-field button{
+/* Input fields */
+form .input-field {
+    width: 100%;
+    margin: 5px 0;
+}
+
+form .input-field input,
+form .input-field select {
     width: 100%;
     padding: 8px;
-    border-radius: 4px;
+    margin: 5px 0;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.65);
+    font-size: 16px;
+}
+
+/* Error message */
+form .input-field .error-div span {
+    color: red;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Checkbox */
+form .input-field input[type='checkbox'] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Button styling */
+form .button-field {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+form .button-field button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
     cursor: pointer;
     background: blue;
     color: white;
     border: 2px solid blue;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
+form .button-field button:hover {
+    background: darkblue;
+}
 
+/* Responsive Styling */
+@media screen and (max-width: 1024px) {
+    .validation-container6 {
+        width: 40%;
+        max-width: 350px;
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .validation-container6 {
+        width: 60%;
+        max-width: 300px;
+    }
+    
+    form .input-field input,
+    form .input-field select {
+        font-size: 14px;
+    }
 
- 
+    form .button-field button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .validation-container6 {
+        width: 90%;
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    form .input-field input,
+    form .input-field select {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    form .button-field button {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
