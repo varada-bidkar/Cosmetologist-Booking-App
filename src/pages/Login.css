@@ -1,156 +1,155 @@
-.login-cont{
-    width: 50%;
-    max-height: 450px;
-    border: 2PX solid whitesmoke;
-    background:whitesmoke;
+/* Main Login Container */
+.login-cont {
+    width: 90%;
+    max-width: 500px;
+    min-height: 450px;
+    border: 2px solid whitesmoke;
+    background: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 10px auto;
+    margin: 30px auto;
     border-radius: 20px;
-    padding: 20px 40px;
-    background: url(https://t3.ftcdn.net/jpg/04/53/80/08/360_F_453800899_UbsP11M9R2Tv6KaO8TniMFNZPQNrwyVc.jpg);
-    background-position: center;
-    background-size: cover; 
-    background-color: transparent;
-    border-radius:  99px;
-}
-.title{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.title h2{
-    width: 100%;
-    height: 10px;
-    color: black;
-    border-radius: 4px;
-    font-size: 22px;
-}
-  
-.login-cont form{
-    width: 400px;
-    padding: 15px 10px;
-    margin-bottom: 200px;
-    font-weight: bold;
-}
-form .input-field{ 
-    width: 100%; 
-    margin: 5px 0px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
     
-}
-form .input-field input{
-    width: 100%;
-    padding: 5px;
-    margin:5px 0px;
-    border-radius: 4px;
-    outline: none;
-    background-color: transparent;
-}
-form .input-field input:hover{
-    color: black;
-    background-color: rgba(245, 245, 245, 0.39);
-}
-form .input-field select{
-    width: 100%;
-    padding: 5px;
-    margin:5px 0px;
-    border-radius: 4px;
-    outline: none;
-    background-color: transparent;
-}
-form .input-field select:hover{
-    color: black;
-    background-color: rgba(245, 245, 245, 0.39);
-
-}
-.input-field select option {
-    background: transparent; 
-    color: #000;
-  }
-  
-  .input-field select:focus {
-    font-weight: bold;
-    border-color: #000; 
-  }
-    
-form .input-field p{ 
-    display: flex;
-    align-items: start;
-    font-size: 14px; 
-    font-weight: bold; 
-    
-}
-    
-form .input-field,
-form .input-field input[type='email'],
-form .input-field input[type='password'],
-form .input-field select
-{
-
-    width: 100%;
-    padding: 5px;
-    margin:5px 0px;
-    border-radius: 4px;
-    outline: none;
-}
-form .input-field .error-div{
-    padding: 1px 0px;
-    
+    /* Background Image */
+    background: url(https://t3.ftcdn.net/jpg/04/53/80/08/360_F_453800899_UbsP11M9R2Tv6KaO8TniMFNZPQNrwyVc.jpg) center/cover;
 }
 
-form .input-field .error-div p{
-    font-size: 13px;
-    font-weight: bold;
-
-}
-form .input-field .sub-field{
-    width: 20%;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: row;
-    gap: 9px;
-}
-.input-field .inp{
+/* Background Overlay for Readability */
+.login-cont::before {
+    content: "";
+    position: absolute;
     width: 100%;
-    padding: 0px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+    border-radius: 20px;
+    z-index: 1;
+}
+
+/* Ensure All Content Stays Above Overlay */
+.login-cont * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Title Section */
+.title {
+    width: 100%;
     text-align: center;
-    flex-direction: row;
-}
-form .input-field input[type='checkbox']{
-    width: 100%;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: row;
-    gap: 9px;
-   
 }
 
-form button{
-    width: 100%;
-}
-
-form button{
-    width: 100%;
-    padding: 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    color: white;
-    background-color: transparent;
+.title h2 {
+    color: black;
+    font-size: 22px;
     font-weight: bold;
 }
-form button:hover{
-    color: black;
+
+/* Form Styling */
+.login-cont form {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-field input,
+.input-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    outline: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Input Hover Effect */
+.input-field input:hover,
+.input-field select:hover {
     background-color: rgba(245, 245, 245, 0.39);
 }
 
+/* Dropdown Select Fix */
+.input-field select option {
+    background: white;
+    color: black;
+}
 
+/* Checkbox Styling */
+.input-field input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
 
+/* Error Message */
+.error-div p {
+    font-size: 13px;
+    color: red;
+}
 
- 
+/* Submit Button */
+form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-cont {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .title h2 {
+        font-size: 20px;
+    }
+
+    .login-cont form {
+        padding: 10px;
+    }
+
+    .input-field input,
+    .input-field select {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-cont {
+        border-radius: 15px;
+        padding: 10px;
+    }
+
+    .title h2 {
+        font-size: 18px;
+    }
+
+    form button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
