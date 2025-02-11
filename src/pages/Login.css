@@ -1,0 +1,156 @@
+.login-cont{
+    width: 50%;
+    max-height: 450px;
+    border: 2PX solid whitesmoke;
+    background:whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 20px;
+    padding: 20px 40px;
+    background: url(https://t3.ftcdn.net/jpg/04/53/80/08/360_F_453800899_UbsP11M9R2Tv6KaO8TniMFNZPQNrwyVc.jpg);
+    background-position: center;
+    background-size: cover; 
+    background-color: transparent;
+    border-radius:  99px;
+}
+.title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title h2{
+    width: 100%;
+    height: 10px;
+    color: black;
+    border-radius: 4px;
+    font-size: 22px;
+}
+  
+.login-cont form{
+    width: 400px;
+    padding: 15px 10px;
+    margin-bottom: 200px;
+    font-weight: bold;
+}
+form .input-field{ 
+    width: 100%; 
+    margin: 5px 0px;
+    
+}
+form .input-field input{
+    width: 100%;
+    padding: 5px;
+    margin:5px 0px;
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+}
+form .input-field input:hover{
+    color: black;
+    background-color: rgba(245, 245, 245, 0.39);
+}
+form .input-field select{
+    width: 100%;
+    padding: 5px;
+    margin:5px 0px;
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+}
+form .input-field select:hover{
+    color: black;
+    background-color: rgba(245, 245, 245, 0.39);
+
+}
+.input-field select option {
+    background: transparent; 
+    color: #000;
+  }
+  
+  .input-field select:focus {
+    font-weight: bold;
+    border-color: #000; 
+  }
+    
+form .input-field p{ 
+    display: flex;
+    align-items: start;
+    font-size: 14px; 
+    font-weight: bold; 
+    
+}
+    
+form .input-field,
+form .input-field input[type='email'],
+form .input-field input[type='password'],
+form .input-field select
+{
+
+    width: 100%;
+    padding: 5px;
+    margin:5px 0px;
+    border-radius: 4px;
+    outline: none;
+}
+form .input-field .error-div{
+    padding: 1px 0px;
+    
+}
+
+form .input-field .error-div p{
+    font-size: 13px;
+    font-weight: bold;
+
+}
+form .input-field .sub-field{
+    width: 20%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: row;
+    gap: 9px;
+}
+.input-field .inp{
+    width: 100%;
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+form .input-field input[type='checkbox']{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: row;
+    gap: 9px;
+   
+}
+
+form button{
+    width: 100%;
+}
+
+form button{
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    font-weight: bold;
+}
+form button:hover{
+    color: black;
+    background-color: rgba(245, 245, 245, 0.39);
+}
+
+
+
+
+ 
