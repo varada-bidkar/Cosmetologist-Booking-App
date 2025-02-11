@@ -1,61 +1,147 @@
+/* Offer Section */
 .offer p {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   background-color: lightpink;
   cursor: pointer;
 }
-.offer p:hover{
+
+.offer p:hover {
   color: gainsboro;
 }
+
+/* Main Container */
 .container {
-    width: 100%;
-    height: 550px;
-    display: flex;
-    align-content: start;
-    justify-content: start;
-    background: url(main.jpg);
-    background-position: center;
-    background-size:0dvb;
-   border-radius:  9px;
-   padding: 50px;
-  
-  }
-  
-  .box{
-    width: 100%;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-    padding: 10px 40px;
-  }
-  .box .links a{
-    margin: 0px 40px;
-    text-decoration: none;
-    color: black;
-    
-  }
-  .box .links a:hover{
-    border-bottom: 1px solid black;
-    transition: all ease-in 0.1s;
-  }
-  .box button{
-    border: none;
-    border-radius: 20px;
-    color: white;
-    background-color: black;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: all ease 0.4s;
-  }
-  .box button:hover{
-    color: black;
-    background-color: white;
-    border: 2px solid black;
-  }
-  .active{
-    color: blue;
-    font-weight: bold;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background: url(main.jpg);
+  background-position: center;
+  background-size: cover; /* Fixed typo, set proper background scaling */
+  border-radius: 9px;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+/* Navbar */
+.box {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+
+/* Navigation Links */
+.box .links a {
+  margin: 0px 40px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.box .links a:hover {
+  border-bottom: 2px solid black;
+}
+
+.active {
+  color: blue;
+  font-weight: bold;
+}
+
+/* Button Styling */
+.box button {
+  border: none;
+  border-radius: 20px;
+  color: white;
+  background-color: black;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+
+.box button:hover {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    height: 450px; /* Adjusted height for smaller screens */
+    padding: 30px;
   }
 
-  
+  .box {
+    padding: 10px 30px;
+  }
+
+  .box .links a {
+    margin: 0px 25px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 400px;
+    padding: 20px;
+  }
+
+  .box {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .box .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .box .links a {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .box button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    height: 350px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .box .links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .box .links a {
+    font-size: 12px;
+  }
+
+  .box button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
